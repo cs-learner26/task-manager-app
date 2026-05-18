@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  .navbar {
+    background: #2f3340;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .nav-links span {
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .active-link {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .add-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #6cc06c;
+    border: none;
+    color: white;
+  }
+  
+  .filters {
+    background: #eaeaea;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .task-card {
+    background: #d9d9d9;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .btn {
+    margin-right: 10px;
+    padding: 6px 15px;
+    border: none;
+    color: white;
+  }
+  
+  .edit,
+  .delete {
+    background: #6cc06c;
+  }
+
+  /* FORM POPUP */
+
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-box {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .form-box input,
+  .form-box textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+/* FORM OVERLAY */
+.form-overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .form-box {
+    background:white;
+    padding:30px;
+    width:350px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  
+  .form-box input,
+  .form-box select,
+  .form-box textarea {
+    padding:8px;
+    font-size:14px;
+  }
