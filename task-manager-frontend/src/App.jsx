@@ -4,7 +4,7 @@ import TaskList from "./components/TaskList";
 import AddTaskForm from "./components/AddTaskForm";
 import Filter from "./Filter";
 
-const API = import.meta.env.VITE_API_URL;
+const API = "http://localhost:5000";
 
 export default function App() {
 
@@ -125,7 +125,7 @@ export default function App() {
 
     if (
       priorityFilter !== "All" &&
-      task.priority !== Number(priorityFilter)
+      task.priority !== priorityFilter
     )
       return false;
 

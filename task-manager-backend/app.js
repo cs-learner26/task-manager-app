@@ -1,0 +1,19 @@
+const express = require("express");
+const cors = require("cors");
+
+const taskRoutes = require("./routes/taskRoutes");
+
+const app = express();
+
+/* Middleware */
+app.use(cors());
+app.use(express.json());
+
+/* Routes */
+app.get("/", (req, res) => {
+  res.json({ message: "Express server running 🚀" });
+});
+
+app.use("/api/tasks", taskRoutes);
+
+module.exports = app;
