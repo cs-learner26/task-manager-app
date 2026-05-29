@@ -6,7 +6,7 @@ const {
   createTask,
   updateTask,
   deleteTask,
-} = require("../controllers/temp");
+} = require("../controllers/taskController");
 
 // ======================
 // GET ALL TASKS
