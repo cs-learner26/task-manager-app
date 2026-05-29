@@ -4,7 +4,7 @@ import TaskList from "./components/TaskList";
 import AddTaskForm from "./components/AddTaskForm";
 import Filter from "./Filter";
 
-const API = "http://localhost:5000";
+const API = import.meta.env.VITE_API_URL;
 
 export default function App() {
 

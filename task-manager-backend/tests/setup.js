@@ -1,9 +1,14 @@
 const mongoose = require("mongoose");
+const { MongoMemoryServer } = require("mongodb-memory-server");
+
+let mongoServer;
 
 beforeAll(async () => {
-  await mongoose.connect(
-    "mongodb://127.0.0.1:27017/task-manager-test"
-  );
+  mongoServer = await MongoMemoryServer.create();
+
+  const uri = mongoServer.getUri();
+
+  await mongoose.connect(uri);
 });
 
 afterEach(async () => {
@@ -15,6 +20,6 @@ afterEach(async () => {
 });
 
 afterAll(async () => {
-  await mongoose.connection.dropDatabase();
   await mongoose.connection.close();
+  await mongoServer.stop();
 });
